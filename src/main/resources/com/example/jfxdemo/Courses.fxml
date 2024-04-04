@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="toAssessment" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jfxdemo.CoursesController">
+   <children>
+      <ListView fx:id="AssignmentList" layoutX="24.0" layoutY="409.0" prefHeight="125.0" prefWidth="675.0" />
+      <Text fx:id="AssignmentString" layoutX="288.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignments" textAlignment="CENTER" wrappingWidth="146.13671875" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#toMain" text="Back to main" />
+      <Text fx:id="CourseString" layoutX="23.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course name" textAlignment="CENTER" wrappingWidth="675.3333333333335" />
+      <TextArea fx:id="courseDescription" editable="false" layoutX="23.0" layoutY="79.0" prefHeight="258.0" prefWidth="675.0" text="Course..." />
+      <Button fx:id="assignment" layoutX="303.0" layoutY="534.0" mnemonicParsing="false" onAction="#toAssignment" prefHeight="25.0" prefWidth="117.0" text="go to assessment" />
+      <StackedBarChart fx:id="chart" alternativeColumnFillVisible="true" layoutX="951.0" layoutY="28.0" prefHeight="544.0" prefWidth="200.0" title="Course grade" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis autoRanging="false" lowerBound="0" side="LEFT" upperBound="100" />
+        </yAxis>
+      </StackedBarChart>
+      <Text layoutX="731.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status:" wrappingWidth="98.803466796875" />
+      <Text fx:id="textG" layoutX="736.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="214.66670735677098" />
+      <Text fx:id="text" layoutX="24.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="117.33333333333348" />
+   </children>
+</AnchorPane>

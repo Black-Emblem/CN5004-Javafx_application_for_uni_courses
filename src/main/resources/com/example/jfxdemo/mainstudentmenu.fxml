@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jfxdemo.mainStudentController">
+   <children>
+      <Text layoutX="39.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Courses" textAlignment="CENTER" wrappingWidth="150.0">
+         <font>
+            <Font size="28.0" />
+         </font></Text>
+      <ListView fx:id="cList" layoutX="14.0" layoutY="74.0" onMouseReleased="#toCourse" prefHeight="450.0" prefWidth="200.0" />
+      <Button layoutX="1038.0" layoutY="14.0" mnemonicParsing="false" onAction="#toProfile" text="go to profile information" />
+      <ListView fx:id="aList" layoutX="248.0" layoutY="75.0" onMouseReleased="#toAssignment" prefHeight="450.0" prefWidth="200.0" />
+      <Text layoutX="248.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignments" textAlignment="CENTER" wrappingWidth="200.0">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Button layoutX="73.0" layoutY="536.0" mnemonicParsing="false" onAction="#toCourse" text="go to course" />
+      <Button layoutX="294.0" layoutY="536.0" mnemonicParsing="false" onAction="#toAssignment" text="go to assignment" />
+      <LineChart fx:id="gradeGraph" layoutX="454.0" layoutY="41.0" prefHeight="555.0" prefWidth="739.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yAxis" side="LEFT" />
+        </yAxis>
+      </LineChart>
+   </children>
+</Pane>

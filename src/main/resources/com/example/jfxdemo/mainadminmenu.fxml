@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jfxdemo.mainAdminController">
+   <children>
+      <ImageView fx:id="UserIcon" fitHeight="50.0" fitWidth="50.0" layoutX="1136.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/icon.png" />
+         </image></ImageView>
+      <Button layoutX="1078.0" layoutY="27.0" mnemonicParsing="false" onAction="#toProfile" text="Profile" />
+      <ListView fx:id="cList" layoutX="31.0" layoutY="48.0" prefHeight="496.0" prefWidth="219.0" />
+      <ListView fx:id="aList" layoutX="268.0" layoutY="48.0" prefHeight="496.0" prefWidth="219.0" />
+      <Text layoutX="294.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignments" textAlignment="CENTER" wrappingWidth="167.47003173828125" />
+      <Text layoutX="57.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Courses" textAlignment="CENTER" wrappingWidth="167.47003173828125" />
+      <Button layoutX="79.0" layoutY="554.0" mnemonicParsing="false" onAction="#gotoCourse" prefHeight="25.0" prefWidth="124.0" text="go to course" />
+      <Button layoutX="316.0" layoutY="554.0" mnemonicParsing="false" onAction="#gotoAssignments" prefHeight="25.0" prefWidth="124.0" text="go to assignments" />
+      <Button layoutX="1089.0" layoutY="105.0" mnemonicParsing="false" onAction="#newCourse" text="new course" />
+      <Button layoutX="1073.0" layoutY="168.0" mnemonicParsing="false" onAction="#newAssignments" text="new Assignments" />
+      <Button layoutX="1034.0" layoutY="554.0" mnemonicParsing="false" onAction="#newUser" text="New user" />
+      <TextField fx:id="eField" layoutX="964.0" layoutY="519.0" prefHeight="25.0" prefWidth="205.0" promptText="Email" />
+      <Text fx:id="text" layoutX="964.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="205.0" />
+   </children>
+</Pane>

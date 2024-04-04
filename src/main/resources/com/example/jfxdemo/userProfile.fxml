@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jfxdemo.UserProfileController">
+    <children>
+        <TextField fx:id="idField" disable="true" layoutX="51.0" layoutY="83.0" prefHeight="25.0" prefWidth="261.0" />
+        <TextField fx:id="surnameField" disable="true" layoutX="51.0" layoutY="168.0" prefHeight="25.0" prefWidth="261.0" />
+        <TextField fx:id="pEmailField" disable="true" layoutX="51.0" layoutY="210.0" prefHeight="25.0" prefWidth="261.0" />
+        <TextField fx:id="emailField" disable="true" layoutX="51.0" layoutY="253.0" prefHeight="25.0" prefWidth="261.0" />
+        <TextField fx:id="phoneField" disable="true" layoutX="51.0" layoutY="337.0" prefHeight="25.0" prefWidth="261.0" />
+        <Text layoutX="51.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student ID:" wrappingWidth="203.13671875" />
+        <Text layoutX="51.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" wrappingWidth="203.13671875" />
+        <Text layoutX="51.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surname:" wrappingWidth="203.13671875" />
+        <Text layoutX="51.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Personal Email:" wrappingWidth="203.13671875" />
+        <Text layoutX="51.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="University email:" wrappingWidth="203.13671875" />
+        <Text layoutX="51.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone number:" wrappingWidth="203.13671875" />
+        <Text layoutX="51.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Birthday:" wrappingWidth="203.13671875" />
+        <Text layoutX="51.0" layoutY="417.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender:" wrappingWidth="203.13671875" />
+        <ChoiceBox fx:id="genderField" disable="true" layoutX="51.0" layoutY="420.0" prefHeight="25.0" prefWidth="261.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Male" />
+                    <String fx:value="Female" />
+                    <String fx:value="Other" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <DatePicker fx:id="bDayField" disable="true" layoutX="51.0" layoutY="379.0" prefHeight="25.0" prefWidth="261.0" />
+      <Button layoutX="51.0" layoutY="542.0" mnemonicParsing="false" onAction="#toMain" text="back to main screen" />
+      <BarChart fx:id="avarGrade" alternativeColumnFillVisible="true" alternativeRowFillVisible="false" categoryGap="5.0" layoutX="375.0" layoutY="40.0" prefHeight="502.0" prefWidth="771.0" title="Avarage Grade" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+         <xAxis>
+            <CategoryAxis prefWidth="714.0" side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis autoRanging="false" side="LEFT" />
+         </yAxis>
+      </BarChart>
+      <TextField fx:id="nameField" disable="true" layoutX="51.0" layoutY="126.0" prefHeight="25.0" prefWidth="261.0" />
+      <Text layoutX="50.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" wrappingWidth="203.13671875" />
+      <PasswordField fx:id="passField" disable="true" layoutX="51.0" layoutY="295.0" prefHeight="25.0" prefWidth="261.0" />
+      <Button layoutX="51.0" layoutY="464.0" mnemonicParsing="false" onAction="#unlock" prefHeight="25.0" prefWidth="141.0" text="cheange personal info" />
+    </children>
+</AnchorPane>
